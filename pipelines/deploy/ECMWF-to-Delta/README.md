@@ -1,6 +1,6 @@
 # ECMWF to Delta Pipeline
 
-This article provides a guide on how to execute a pipeline that makes an API request to pull the ECMWF MARS Data as a .nc file, transform the .nc file to a dataframe and writes to a Delta Table locally using the RTDIP SDK. 
+This article provides a guide on how to execute a pipeline that makes an API request to pull the ECMWF MARS Data as a .nc file, transform the .nc file to a dataframe from a grid range and writes to a Delta Table locally using the RTDIP SDK. 
 
 This pipeline was tested on an M2 Macbook Pro using VS Code in a Python (3.11) environment.
 
