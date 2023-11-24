@@ -1,6 +1,6 @@
 # Time Weighted Average
 
-[Time Weighted Averages](../../code-reference/query/time-weighted-average.md) provide an unbiased average when working with irregularly sampled data. The RTDIP SDK requires the following parameters to perform time weighted average queries:
+[Time Weighted Averages](../../code-reference/query/functions/time_series/time-weighted-average.md) provide an unbiased average when working with irregularly sampled data. The RTDIP SDK requires the following parameters to perform time weighted average queries:
 
 Window Size Mins - (deprecated)
 Time Interval Rate - The time interval rate
@@ -11,7 +11,7 @@ Step - Data points with step "enabled" or "disabled". The options for step are "
 ## Prerequisites
 Ensure you have installed the RTDIP SDK as specified in the [Getting Started](../../../getting-started/installation.md#installing-the-rtdip-sdk) section.
 
-This example is using [DefaultAuth()](../../code-reference/authentication/azure.md) and [DatabricksSQLConnection()](../../code-reference/query/db-sql-connector.md) to authenticate and connect. You can find other ways to authenticate here. The alternative built in connection methods are either by [PYODBCSQLConnection()](../../code-reference/query/pyodbc-sql-connector.md), [TURBODBCSQLConnection()](../../code-reference/query/turbodbc-sql-connector.md) or [SparkConnection()](../../code-reference/query/spark-connector.md).
+This example is using [DefaultAuth()](../../code-reference/authentication/azure.md) and [DatabricksSQLConnection()](../../code-reference/query/connectors/db-sql-connector.md) to authenticate and connect. You can find other ways to authenticate here. The alternative built in connection methods are either by [PYODBCSQLConnection()](../../code-reference/query/connectors/pyodbc-sql-connector.md), [TURBODBCSQLConnection()](../../code-reference/query/connectors/turbodbc-sql-connector.md) or [SparkConnection()](../../code-reference/query/connectors/spark-connector.md).
 
 ## Parameters
 |Name|Type|Description|

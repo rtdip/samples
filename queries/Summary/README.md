@@ -1,6 +1,6 @@
-# Metadata
+# Raw
 
-[Metadata](../../code-reference/query/functions/metadata.md) queries provide contextual information for time series measurements and include information such as names, descriptions and units of measure.
+[Raw](../../code-reference/query/functions/time_series/summar.md) facilitates performing a summary of statisics of time series data, typically filtered by a Tag Name or Device Name and an event time.
 
 ## Prerequisites
 Ensure you have installed the RTDIP SDK as specified in the [Getting Started](../../../getting-started/installation.md#installing-the-rtdip-sdk) section.
@@ -14,9 +14,13 @@ This example is using [DefaultAuth()](../../code-reference/authentication/azure.
 |region|str|Region|
 |asset|str|Asset|
 |data_security_level|str|Level of data security|
-|tag_names|(optional, list)|Either pass a list of tagname/tagnames ["tag_1", "tag_2"] or leave the list blank [] or leave the parameter out completely|
+|data_type|str|Type of the data (float, integer, double, string)|
+|tag_names|list|List of tagname or tagnames ["tag_1", "tag_2"]|
+|start_date|str|Start date (Either a date in the format YY-MM-DD or a datetime in the format YYY-MM-DDTHH:MM:SS or specify the timezone offset in the format YYYY-MM-DDTHH:MM:SS+zz:zz)|
+|end_date|str|End date (Either a date in the format YY-MM-DD or a datetime in the format YYY-MM-DDTHH:MM:SS or specify the timezone offset in the format YYYY-MM-DDTHH:MM:SS+zz:zz)|
+|include_bad_data|bool|Include "Bad" data points with True or remove "Bad" data points with False|
 
 ## Example
 ```python
---8<-- "https://raw.githubusercontent.com/rtdip/samples/main/queries/Metadata/metadata.py"
+--8<-- "https://raw.githubusercontent.com/rtdip/samples/main/queries/Summary/summary.py"
 ```
