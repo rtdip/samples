@@ -1,6 +1,6 @@
-# Raw
+# Summary
 
-[Raw](../../code-reference/query/functions/time_series/summary.md) facilitates performing a summary of statisics of time series data, typically filtered by a Tag Name or Device Name and an event time.
+[Summary](../../code-reference/query/functions/time_series/summary.md) facilitates performing a summary of statisics of time series data, typically filtered by a Tag Name or Device Name and an event time.
 
 ## Prerequisites
 Ensure you have installed the RTDIP SDK as specified in the [Getting Started](../../../getting-started/installation.md#installing-the-rtdip-sdk) section.
