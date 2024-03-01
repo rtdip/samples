@@ -1,0 +1,11 @@
+name: rtdip-samples
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - python==3.11
+    - pip==23.1.2
+    - black==23.7.0
+    - openjdk==11.0.15
+    - pip:
+        - rtdip-sdk[pipelines,pyspark]>=0.10.1
