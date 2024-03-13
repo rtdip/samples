@@ -15,12 +15,15 @@ def pipeline():
 
     DATABRICKS_WORKSPACE = "adb-xxxxxxxxxx.x.azuredatabricks.net"
     DATABRICKS_CLUSTER_ID = "xxx-yyyyyy-zzzzzzzz"
+    DATABRICKS_USER_ID = (
+        "your_user_id@your_domain.com"  # required for Spark Connect on Windows
+    )
 
     AZURE_KEYVAULT = "{YOUR-KEYVAULT-NAME}"
     AZURE_KEYVAULT_SECRET = "{YOUR-SECRET-NAME}"
 
-    spark_remote = "sc://{}:443/;token={};x-databricks-cluster-id={}".format(
-        DATABRICKS_WORKSPACE, token, DATABRICKS_CLUSTER_ID
+    spark_remote = "sc://{}:443/;token={};x-databricks-cluster-id={};user_id={}".format(
+        DATABRICKS_WORKSPACE, token, DATABRICKS_CLUSTER_ID, DATABRICKS_USER_ID
     )
 
     EVENTHUB_CONNECTION_STRING = AzureKeyVaultSecrets(
