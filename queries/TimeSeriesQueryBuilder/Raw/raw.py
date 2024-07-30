@@ -14,10 +14,8 @@ data = (
         tagname_filter=["{tag_name_1}", "{tag_name_2}"],
         start_date="2023-01-01",
         end_date="2023-01-31",
-        include_bad_data=True
+        include_bad_data=True,
     )
 )
 
 print(data)
-
-
