@@ -1,6 +1,8 @@
-# Circular Standard Deviation
+# Interpolate
 
-[Circular Standard Deviation](../../code-reference/query/functions/time_series/circular-standard-deviation.md) - A function that receives a dataframe of raw tag data and computes the circular standard deviation for samples assumed to be in the range, returning the results.
+[Interpolate](../../code-reference/query/functions/time_series/interpolate.md) - takes resampling one step further to estimate the values of unknown data points that fall between existing, known data points. In addition to the resampling parameters, interpolation also requires:
+
+Interpolation Method - Forward Fill, Backward Fill or Linear
 
 ## Prerequisites
 Ensure you have installed the RTDIP SDK as specified in the [Getting Started](../../../getting-started/installation.md#installing-the-rtdip-sdk) section.
@@ -10,21 +12,18 @@ This example is using [DefaultAuth()](../../code-reference/authentication/azure.
 ## Parameters
 |Name|Type|Description|
 |---|---|---|
-|business_unit|str|Business unit of the data|
-region|str|Region|
-asset|str|Asset|
-data_security_level|str|Level of data security|
-data_type|str|Type of the data (float, integer, double, string)
 tag_names|list|List of tagname or tagnames ["tag_1", "tag_2"]|
 start_date|str|Start date (Either a date in the format YY-MM-DD or a datetime in the format YYY-MM-DDTHH:MM:SS or specify the timezone offset in the format YYYY-MM-DDTHH:MM:SS+zz:zz)|
 end_date|str|End date (Either a date in the format YY-MM-DD or a datetime in the format YYY-MM-DDTHH:MM:SS or specify the timezone offset in the format YYYY-MM-DDTHH:MM:SS+zz:zz)|
+sample_rate|int|(deprecated) Please use time_interval_rate instead. See below.|
+sample_unit|str|(deprecated) Please use time_interval_unit instead. See below.|
 time_interval_rate|str|The time interval rate (numeric input)|
 time_interval_unit|str|The time interval unit (second, minute, day, hour)|
-lower_bound|int|Lower boundary for the sample range|
-upper_bound|int|Upper boundary for the sample range|
+agg_method|str|Aggregation Method (first, last, avg, min, max)|
+interpolation_method|str|Interpolation method (forward_fill, backward_fill, linear)|
 include_bad_data|bool|Include "Bad" data points with True or remove "Bad" data points with False|
 
 ## Example
 ```python
---8<-- "https://raw.githubusercontent.com/rtdip/samples/main/queries/Circular-Standard-Deviation/circular_standard_deviation.py"
+--8<-- "https://raw.githubusercontent.com/rtdip/samples/main/queries/TimeSeriesQueryBuilder/Interpolate/interpolate.py"
 ```

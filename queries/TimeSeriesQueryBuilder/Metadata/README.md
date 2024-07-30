@@ -10,13 +10,9 @@ This example is using [DefaultAuth()](../../code-reference/authentication/azure.
 ## Parameters
 |Name|Type|Description|
 |---|---|---|
-|business_unit|str|Business unit|
-|region|str|Region|
-|asset|str|Asset|
-|data_security_level|str|Level of data security|
 |tag_names|(optional, list)|Either pass a list of tagname/tagnames ["tag_1", "tag_2"] or leave the list blank [] or leave the parameter out completely|
 
 ## Example
 ```python
---8<-- "https://raw.githubusercontent.com/rtdip/samples/main/queries/Metadata/metadata.py"
+--8<-- "https://raw.githubusercontent.com/rtdip/samples/main/queries/TimeSeriesQueryBuilder/Metadata/metadata.py"
 ```

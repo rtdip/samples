@@ -1,6 +1,6 @@
 # Latest
 
-[Latest](../../code-reference/query/functions/time_series/latest.md) returns the latest event values.
+[Latest](../../code-reference/query/functions/weather/latest.md) returns the latest weather event values.
 
 ## Prerequisites
 Ensure you have installed the RTDIP SDK as specified in the [Getting Started](../../../getting-started/installation.md#installing-the-rtdip-sdk) section.
@@ -10,13 +10,13 @@ This example is using [DefaultAuth()](../../code-reference/authentication/azure.
 ## Parameters
 |Name|Type|Description|
 |---|---|---|
-|business_unit|str|Business unit|
-|region|str|Region|
-|asset|str|Asset|
-|data_security_level|str|Level of data security|
-|tag_names|list|List of tagname or tagnames ["tag_1", "tag_2"]|
+|lat|str|Latitude|
+|lon|str|Longitude|
+|limit|int|Limit number of rows returned|
+|measurement_type|str|Measurement Type|
+
 
 ## Example
 ```python
---8<-- "https://raw.githubusercontent.com/rtdip/samples/main/queries/Latest/latest.py"
+--8<-- "https://raw.githubusercontent.com/rtdip/samples/main/queries/WeatherQueryBuilder/Latest-Point/latest_point.py"
 ```
