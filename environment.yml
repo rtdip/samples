@@ -8,4 +8,4 @@ dependencies:
     - black==23.7.0
     - openjdk==11.0.15
     - pip:
-        - rtdip-sdk[pipelines,pyspark]>=0.10.1
+        - rtdip-sdk[pipelines,pyspark]>=0.11.9
