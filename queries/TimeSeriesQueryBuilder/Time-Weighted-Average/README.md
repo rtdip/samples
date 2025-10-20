@@ -19,12 +19,11 @@ This example is using [DefaultAuth()](../../code-reference/authentication/azure.
 |tag_names|list|List of tagname or tagnames ["tag_1", "tag_2"]|
 |start_date|str|Start date (Either a utc date in the format YYYY-MM-DD or a utc datetime in the format YYYY-MM-DDTHH:MM:SS or specify the timezone offset in the format YYYY-MM-DDTHH:MM:SS+zz:zz)|
 |end_date|str|End date (Either a utc date in the format YYYY-MM-DD or a utc datetime in the format YYYY-MM-DDTHH:MM:SS or specify the timezone offset in the format YYYY-MM-DDTHH:MM:SS+zz:zz)|
-|window_size_mins|int|(deprecated) Window size in minutes. Please use time_interval_rate and time_interval_unit below instead|
 |time_interval_rate|str|The time interval rate (numeric input)|
 |time_interval_unit|str|The time interval unit (second, minute, day, hour)|
 |window_length|int|Add longer window time in days for the start or end of specified date to cater for edge cases|
 |include_bad_data|bool|Include "Bad" data points with True or remove "Bad" data points with False|
-|step|str|Data points with step "enabled" or "disabled". The options for step are "true", "false" or "metadata". "metadata" will retrieve the step value from the metadata table|
+|step|str|Data points with step "enabled" or "disabled". The options for step is defaulted to "metadata" which will retrieve the step value from the metadata table or step can be specified as "true" or "false"|
 
 ## Example
 ```python

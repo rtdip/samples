@@ -16,8 +16,6 @@ data = (
         end_date="2023-01-31",
         time_interval_rate="15",
         time_interval_unit="minute",
-        agg_method="first",
-        interpolation_method="forward_fill",
     )
 )
 
