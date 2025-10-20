@@ -18,8 +18,6 @@ This example is using [DefaultAuth()](../../code-reference/authentication/azure.
 |tag_names|list|List of tagname or tagnames ["tag_1", "tag_2"]|
 |start_date|str|Start date (Either a date in the format YY-MM-DD or a datetime in the format YYY-MM-DDTHH:MM:SS or specify the timezone offset in the format YYYY-MM-DDTHH:MM:SS+zz:zz)|
 |end_date|str|End date (Either a date in the format YY-MM-DD or a datetime in the format YYY-MM-DDTHH:MM:SS or specify the timezone offset in the format YYYY-MM-DDTHH:MM:SS+zz:zz)|
-|sample_rate|int|(deprecated) Please use time_interval_rate instead. See below.|
-|sample_unit|str|(deprecated) Please use time_interval_unit instead. See below.|
 |time_interval_rate|str|The time interval rate (numeric input)|
 |time_interval_unit|str|The time interval unit (second, minute, day, hour)|
 |include_bad_data|bool|Include "Bad" data points with True or remove "Bad" data points with False|
